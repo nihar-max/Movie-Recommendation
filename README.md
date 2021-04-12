@@ -57,27 +57,7 @@ Star wars which was released in 1977 was one the highest grossing movies of all 
 
 ### Create Movie Recommendation
 
-def predict_movie(movie_name):
-    # First step : Enter a movie name you want to find similar with
-    movie_ratings = movie[movie_name]
-    # Step 2 : Find Correlation of that movie
-    similar_to_movie = movie.corrwith(movie_ratings)
-    
-    #Step 3 Create DataFrame
-    corr_movie = pd.DataFrame(similar_to_movie,columns = ['Correlation'])
-    #Step 4 Drop NA values
-    corr_movie.dropna(inplace = True)
-    
-    #Step 5 Join
-    corr_movie = corr_movie.join(ratings['how_many_times_movie_watched'])
-    
-    #Step 6: Prediction
-    predictions = corr_movie[corr_movie['how_many_times_movie_watched']>100].sort_values(by = "Correlation",ascending = False)
-    
-    return predictions
-
-predictions = predict_movie("Star Wars (1977)")
-
+![image](https://user-images.githubusercontent.com/61958476/114349258-483f5d80-9b85-11eb-8035-f3e13ab74582.png)
 
 ![image](https://user-images.githubusercontent.com/61958476/114348796-a455b200-9b84-11eb-9638-6797e5f8a76e.png)
 
