@@ -19,23 +19,13 @@ Data Source: https://grouplens.org/datasets/movielens/100k/
 #### Q1: Observe Movies with highest Average rating as well as with less Average rating
 >>> mean_ratings = df.groupby("title")["rating"].mean().sort_values(ascending = False)
 
-title
-Marlene Dietrich: Shadow and Light (1996)     5.0
-Prefontaine (1997)                            5.0
-Santa with Muscles (1996)                     5.0
-Star Kid (1997)                               5.0
-Someone Else's America (1995)                 5.0
-Name: rating, dtype: float64
+![image](https://user-images.githubusercontent.com/61958476/114348905-d109c980-9b84-11eb-8c38-2d41c65f8d6f.png)
+
 
 #### Q2: How many times a movie have been watched by the critics ?
 >>> df.groupby("title")['rating'].count().sort_values(ascending = False)
 
-title
-Star Wars (1977)                              583
-Contact (1997)                                509
-Fargo (1996)                                  508
-Return of the Jedi (1983)                     507
-Liar Liar (1997)                              485
+![image](https://user-images.githubusercontent.com/61958476/114348942-df57e580-9b84-11eb-9f12-96afdbd25973.png)
 
 ### Conclusion:
 Star wars which was released in 1977 was one the highest grossing movies of all time with box-office of 777 Milion $, So it is highly watched by critics and similar to that we can observe some movies like Return of Jedi , Liar Liar , Fargo ... These all are Popular highest grossing films¶
